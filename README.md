@@ -82,6 +82,63 @@ npm run dev
         }
 ```
 
+## API Features
+
+### Book APIs
+
+#### `POST /api/books`
+
+- **Purpose:** Create a new book
+- **Request Body:**
+```json
+{
+  "title": "The Alchemist",
+  "author": "Paulo Coelho",
+  "genre": "FICTION",
+  "isbn": "9780061122415",
+  "description": "A novel about following your dreams.",
+  "copies": 10
+}
+```
+### Validation:
+
+- Required fields: title, author, isbn, genre, copies
+
+- copies must be >= 0
+
+## GET /api/books
+### Purpose: Get all books
+
+ ### Query Parameters
+- filter (by genre)
+
+- sort (asc or desc)
+
+- limit (number of books to retrieve)
+
+### Example:
+```
+/api/books?filter=SCIENCE&sortBy=title&sort=asc&limit=5
+```
+
+## PUT /api/books/:bookId
+- Purpose: Update book info
+
+- Request Body: Any valid book fields
+
+- Note: Runs Mongoose validators during update
+
+## DELETE /api/books/:bookId
+- Purpose: Delete a book
+
+- Validation: Ensures bookId is valid, else returns 400
+
+## POST /api/borrow
+- Purpose: Borrow one or more copies of a book
+
+## GET /api/borrow
+- Purpose: Aggregated summary of borrowed books
+
 ## Features
 
 - Full CRUD for books
