@@ -6,8 +6,7 @@ A RESTful API to manage a library system where users can add, view, update, dele
 
 ## Live Server
 
-(Optional) Add your deployed API link here  
-Example: https://library-api.onrender.com
+https://library-management-puce.vercel.app
 
 ---
 
@@ -82,7 +81,9 @@ npm run dev
             "updatedAt": "2025-06-21T03:41:58.128Z"
         }
 ```
+
 ## Features
+
 - Full CRUD for books
 
 - Genre filtering, sorting, and pagination
@@ -98,5 +99,7 @@ npm run dev
 - Structured and consistent error responses
 
 ## Author
+
 ### Name: Tanzeem Siddique
+
 ### Project: Milestone 3 (Library API with validation)
